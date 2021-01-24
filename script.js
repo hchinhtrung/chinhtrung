@@ -30,9 +30,9 @@
      */
     'use strict';
 
-    const ByteEfficiencyAudit = require('./byte-efficiency-audit.js');
-    const UnusedCSS = require('../../computed/unused-css.js');
-    const i18n = require('../../lib/i18n/i18n.js');
+    import ByteEfficiencyAudit, { SCORING_MODES, DEFAULT_PASS } from './byte-efficiency-audit.js';
+    import { request } from '../../computed/unused-css.js';
+    import { createMessageInstanceIdFn, UIStrings as __UIStrings } from '../../lib/i18n/i18n.js';
 
     const UIStrings = {
         /** Imperative title of a Lighthouse audit that tells the user to remove content from their CSS that isn’t needed immediately and instead load that content at a later time. This is displayed in a list of audit titles that Lighthouse generates. */
@@ -43,7 +43,7 @@
             '[Learn more](https://web.dev/unused-css-rules/).',
     };
 
-    const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
+    const str_ = createMessageInstanceIdFn(__filename, UIStrings);
 
     // Allow 10KiB of unused CSS to permit `:hover` and other styles not used on a non-interactive load.
     // @see https://github.com/GoogleChrome/lighthouse/issues/9353 for more discussion.
@@ -58,7 +58,7 @@
                 id: 'unused-css-rules',
                 title: str_(UIStrings.title),
                 description: str_(UIStrings.description),
-                scoreDisplayMode: ByteEfficiencyAudit.SCORING_MODES.NUMERIC,
+                scoreDisplayMode: SCORING_MODES.NUMERIC,
                 requiredArtifacts: ['CSSUsage', 'URL', 'devtoolsLogs', 'traces'],
             };
         }
@@ -70,10 +70,10 @@
          * @return {Promise<ByteEfficiencyAudit.ByteEfficiencyProduct>}
          */
         static async audit_(artifacts, _, context) {
-            const unusedCssItems = await UnusedCSS.request({
+            const unusedCssItems = await request({
                 CSSUsage: artifacts.CSSUsage,
                 URL: artifacts.URL,
-                devtoolsLog: artifacts.devtoolsLogs[ByteEfficiencyAudit.DEFAULT_PASS],
+                devtoolsLog: artifacts.devtoolsLogs[DEFAULT_PASS],
             }, context);
             const items = unusedCssItems
                 .filter(sheet => sheet && sheet.wastedBytes > IGNORE_THRESHOLD_IN_BYTES);
@@ -82,17 +82,17 @@
             const headings = [{
                     key: 'url',
                     valueType: 'url',
-                    label: str_(i18n.UIStrings.columnURL)
+                    label: str_(__UIStrings.columnURL)
                 },
                 {
                     key: 'totalBytes',
                     valueType: 'bytes',
-                    label: str_(i18n.UIStrings.columnTransferSize)
+                    label: str_(__UIStrings.columnTransferSize)
                 },
                 {
                     key: 'wastedBytes',
                     valueType: 'bytes',
-                    label: str_(i18n.UIStrings.columnWastedBytes)
+                    label: str_(__UIStrings.columnWastedBytes)
                 },
             ];
 
@@ -103,5 +103,6 @@
         }
     }
 
-    module.exports = UnusedCSSRules;
-    module.exports.UIStrings = UIStrings;
+    export default UnusedCSSRules;
+    const _UIStrings = UIStrings;
+export { _UIStrings as UIStrings };
