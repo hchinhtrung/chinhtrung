@@ -1,1 +1,10 @@
-body,html{font-family:'Roboto Mono',monospace!important;color:#1c1917;font-size:17px;font-weight:400;background-color:#fafaf9}
+html,
+body {
+    font-family: 'Roboto Mono', monospace !important;
+    color: #1C1917;
+    font-size: 17px;
+    font-weight: 400;
+    background-color: #FAFAF9;
+}
+
+/*# sourceMappingURL=style.css.map */
