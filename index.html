@@ -27,16 +27,16 @@
       tabContents = document.getElementById("tabs-id").querySelectorAll(".tab-content > div");
       for (let i = 0; i < aElements.length; i++) {
         aElements[i].classList.remove("text-white");
-        aElements[i].classList.remove("bg-blue-600");
-        aElements[i].classList.add("text-blue-600");
+        aElements[i].classList.remove("bg-blue-500");
+        aElements[i].classList.add("text-blue-500");
         aElements[i].classList.add("bg-white");
         tabContents[i].classList.add("hidden");
         tabContents[i].classList.remove("block");
       }
-      element.classList.remove("text-blue-600");
+      element.classList.remove("text-blue-500");
       element.classList.remove("bg-white");
       element.classList.add("text-white");
-      element.classList.add("bg-blue-600");
+      element.classList.add("bg-blue-500");
       document.getElementById(tabID).classList.remove("hidden");
       document.getElementById(tabID).classList.add("block");
     }
@@ -79,7 +79,7 @@
 
     <div class="w-screen h-screen flex flex-wrap content-center">
       <div class="p-24">
-        <p class="text-3xl font-bold mb-4">Hi, <a class="text-blue-600" href="#logo">I'm here</a></p>
+        <p class="text-3xl font-bold mb-4">Hi, <a class="text-blue-500" href="#logo">I'm here</a></p>
         <p class="text-lg"><strong>Chinh Trung</strong> - Business Analyst with 1 year of experience across the
           Services,
           MarTech, and e-Commerce
@@ -93,17 +93,18 @@
 
   <!-- header -->
   <header class="shadow-md sticky top-0 z-40 bgg" id="logo">
-    <div class="con tainer lg:w-2/3 flex justify-between mx-auto py-2 px-2">
+    <div class="con tainer lg:w-2/3 flex justify-between mx-auto py-3 px-2">
       <div class="">
-        <a href="index.html" class="uppercase font-bold text-2xl"><span
-            class="text-red-600 hover:text-blue-600">chinh</span><span
-            class="text-yellow-600 hover:text-blue-600">trung</span></a>
+        <a href="/#logo" class="uppercase font-bold text-2xl hover:text-blue-500">
+          <span class="border-t-4 border-blue-500">chinh </span>
+          <span class="border-b-4 border-blue-500"> trung</span>
+        </a>
       </div>
       <div class="space-x-6 flex items-center">
         <div> <a href="devc.html"
-            class="uppercase hover:text-white hover:bg-blue-600 p-2 px-3 rounded-md font-medium">devc</a></div>
+            class="uppercase hover:text-white hover:bg-blue-500 p-2 px-3 rounded-md font-bold">devc</a></div>
         <div> <a href="resume.html"
-            class="uppercase hover:text-white hover:bg-blue-600 p-2 px-3 rounded-md font-medium">resume</a></div>
+            class="uppercase hover:text-white hover:bg-blue-500 p-2 px-3 rounded-md font-bold">resume</a></div>
       </div>
     </div>
   </header>
@@ -112,37 +113,37 @@
   <main>
     <!-- banner -->
     <div class=" cursor-default">
-      <div class="container lg:w-2/3 flex justify-between mx-auto py-32 lg:py-56 px-2 lg:text-5xl md:text-4xl text-2xl">
+      <div class="container lg:w-2/3 flex justify-between mx-auto py-32 lg:py-72 px-2 lg:text-5xl md:text-4xl text-2xl">
         <div class="font-bold lg:leading-relaxed leading-normal">
           <p>
-            <span class="hover:text-blue-600">A</span>
-            <!-- <span class="text-red-500 hover:text-blue-600">Junior</span> -->
-            <span class="text-yellow-600 lg:font-bold hover:text-blue-600">Business</span>
-            <span class="text-green-600 lg:font-bold hover:text-blue-600">Analyst</span>
+            <span class="">A</span>
+            <span class="text-blue-500">Business</span>
+            <span class="text-blue-500">Analyst</span>
           </p>
-          <p><span class="text-purple-500 hover:text-blue-600">currently</span>
-            <span class="text-blue-500 hover:text-blue-600">making</span>
-            <span class="text-pink-500 hover:text-blue-600">and</span>
-            <span class="text-red-800 hover:text-blue-600">mostly</span>
+          <p><span class="">currently</span>
+            <span class="">making</span>
+            <span class="">and</span>
+            <span class="">mostly</span>
           </p>
-          <p><span class="text-green-800 hover:text-blue-600">breaking</span>
-            <span class="text-blue-800 hover:text-blue-600">things</span>
-            <span class="text-pink-800 hover:text-blue-600">at</span>
-            <span class="text-blue-800 hover:text-blue-600">Antsomi</span></p>
+          <p><span class="">breaking</span>
+            <span class="">things</span>
+            <span class="">at</span>
+            <span class="underline">Antsomi</span>
+          </p>
         </div>
       </div>
     </div>
 
 
     <!-- summary -->
-    <div class="container lg:w-2/3 mx-auto py-2 px-2">
-      <span class="font-bold upper text-2xl text-blue-600">Summary</span>
+    <div class="container lg:w-2/3 mx-auto py-8 px-2">
+      <span class="font-bold upper lg:text-3xl md:text-3xl text-2xl text-blue-500 underline uppercase">Summary</span>
     </div>
 
     <div class="">
       <div class="container lg:w-3/5 flex justify-between mx-auto py-2 px-2">
         <div
-          class="py-8 px-4 mx-auto bg-white rounded-xl shadow-md space-y-2 sm:py-2 sm:flex sm:items-center sm:space-y-0 sm:space-x-6 hover:bg-yellow-50 border-transparent hover:border-yellow-400 border lg:w-10/12">
+          class="py-8 px-4 mx-auto bg-white rounded-xl shadow-md space-y-2 sm:py-2 sm:flex sm:items-center sm:space-y-0 sm:space-x-6 border lg:w-10/12">
           <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:flex-shrink-0"
             src="https://images.unsplash.com/photo-1510872893374-80379d91fc92?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
             alt="Woman's Face" width="auto" height="auto">
@@ -158,7 +159,7 @@
               </p>
             </div>
             <div class="text-right">
-              <a class="text-blue-600 border border-blue-400 hover:text-white hover:bg-blue-600 py-1 px-4 rounded-full text-sm"
+              <a class="text-blue-500 border border-blue-400 hover:text-white hover:bg-blue-500 py-1 px-4 rounded-md text-sm"
                 href="resume.html" target="_blank" rel="noopener" loading="lazy">More</a>
             </div>
           </div>
@@ -169,7 +170,7 @@
     <div class="mt-4">
       <div class="container lg:w-3/5 flex justify-between mx-auto py-2 px-2">
         <div
-          class="py-8 px-4 mx-auto bg-white rounded-xl shadow-md space-y-2 sm:py-2 sm:flex sm:items-center sm:space-y-0 sm:space-x-6 hover:bg-green-50 border-transparent hover:border-green-400 border lg:w-10/12">
+          class="py-8 px-4 mx-auto bg-white rounded-xl shadow-md space-y-2 sm:py-2 sm:flex sm:items-center sm:space-y-0 sm:space-x-6 border lg:w-10/12">
           <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:flex-shrink-0"
             src="https://images.unsplash.com/photo-1510872893374-80379d91fc92?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
             alt="Woman's Face" width="auto" height="auto" loading="lazy">
@@ -185,7 +186,7 @@
               </p>
             </div>
             <div class="text-right">
-              <a class="text-blue-600 border border-blue-400 hover:text-white hover:bg-blue-600 py-1 px-4 rounded-full text-sm"
+              <a class="text-blue-500 border border-blue-400 hover:text-white hover:bg-blue-500 py-1 px-4 rounded-md text-sm"
                 href="devc.html" target="_blank" rel="noopener">More</a>
             </div>
           </div>
@@ -194,35 +195,36 @@
     </div>
 
     <!-- certi -->
-    <div class="container lg:w-2/3 mx-auto py-2 px-2 mt-32">
-      <span class="font-bold upper text-2xl text-blue-600">Certificate</span>
+    <div class="container lg:w-2/3 mx-auto py-8 px-2 pt-48">
+      <span
+        class="font-bold upper lg:text-3xl md:text-3xl text-2xl text-blue-500 underline uppercase">certificate</span>
     </div>
 
     <div class="">
       <div class="container lg:w-2/3 flex justify-between mx-auto py-2 px-2">
         <div class="flex flex-wrap" id="tabs-id">
           <div class="w-full">
-            <ul class="flex mb-0 list-none flex-wrap pt-3 pb-0 flex-row space-x-0">
+            <ul class="flex mb-0 list-none flex-wrap pb-0 flex-row space-x-0">
               <li class="-mb-px last:mr-0 flex-auto text-center">
-                <a class="font-bold uppercase px-5 py-1 shadow-lg rounded-t block leading-normal text-white bg-blue-600 bg-white"
+                <a class="font-bold uppercase px-5 py-1 shadow-lg rounded-t block leading-normal text-white bg-blue-500 bg-white"
                   onclick="changeAtiveTab(event,'tab-profile')">
                   <i class="fas fa-space-shuttle text-base mr-1"></i> DevC Facebook
                 </a>
               </li>
               <li class="-mb-px last:mr-0 flex-auto text-center">
-                <a class="font-bold uppercase px-5 py-1 shadow-lg rounded-t block leading-normal text-blue-600 bg-white"
+                <a class="font-bold uppercase px-5 py-1 shadow-lg rounded-t block leading-normal text-blue-500 bg-white"
                   onclick="changeAtiveTab(event,'tab-settings')">
                   <i class="fas fa-cog text-base mr-1"></i> Data Science
                 </a>
               </li>
               <li class="-mb-px last:mr-0 flex-auto text-center">
-                <a class="font-bold uppercase px-5 py-1 shadow-lg rounded-t block leading-normal text-blue-600 bg-white"
+                <a class="font-bold uppercase px-5 py-1 shadow-lg rounded-t block leading-normal text-blue-500 bg-white"
                   onclick="changeAtiveTab(event,'tab-options')">
                   <i class="fas fa-briefcase text-base mr-1"></i> SQL
                 </a>
               </li>
               <li class="-mb-px last:mr-0 flex-auto text-center">
-                <a class="font-bold uppercase px-5 py-1 shadow-lg rounded-t block leading-normal text-blue-600 bg-white"
+                <a class="font-bold uppercase px-5 py-1 shadow-lg rounded-t block leading-normal text-blue-500 bg-white"
                   onclick="changeAtiveTab(event,'tab-python')">
                   <i class="fas fa-briefcase text-base mr-1"></i> Python
                 </a>
@@ -230,7 +232,7 @@
             </ul>
 
             <div
-              class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-b border-t-2 border-blue-600">
+              class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-b border-t-2 border-blue-500">
               <div class="px-4 py-5 flex-auto">
                 <div class="tab-content tab-space">
                   <div class="block" id="tab-profile">
@@ -255,23 +257,23 @@
 
 
     <!-- social -->
-    <div class="container lg:w-2/3 mx-auto py-2 px-2 mt-32">
-      <span class="font-bold upper text-2xl text-blue-600">Social</span>
+    <div class="container lg:w-2/3 mx-auto py-8 px-2 pt-48">
+      <span class="font-bold upper lg:text-3xl md:text-3xl text-2xl text-blue-500 underline uppercase">social</span>
     </div>
 
     <div class="bg-gray-">
       <div class="container lg:w-2/3 flex justify-between mx-auto py-2 px-2">
         <div class="flex justify-around mx-auto font-bold capitalize space-x-4 flex-wrap">
           <a target="_blank" rel="noopener" href="mailto:chinhtrung1998@gmail.com"
-            class="border px-4 py-1 border-blue-600 rounded-md hover:shadow-lg hover:bg-blue-600 hover:text-white my-1 shadow-md">email</a>
+            class="border px-4 py-1 border-blue-500 rounded-md hover:shadow-lg hover:bg-blue-500 hover:text-white my-1 shadow-md">email</a>
           <a target="_blank" rel="noopener" href="https://join.skype.com/invite/n51b3rVxdGmw"
-            class="border px-4 py-1 border-blue-600 rounded-md hover:shadow-lg hover:bg-blue-600 hover:text-white my-1 shadow-md">skype</a>
+            class="border px-4 py-1 border-blue-500 rounded-md hover:shadow-lg hover:bg-blue-500 hover:text-white my-1 shadow-md">skype</a>
           <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/hchinhtrung/"
-            class="border px-4 py-1 border-blue-600 rounded-md hover:shadow-lg hover:bg-blue-600 hover:text-white my-1 shadow-md">linkedIn</a>
+            class="border px-4 py-1 border-blue-500 rounded-md hover:shadow-lg hover:bg-blue-500 hover:text-white my-1 shadow-md">linkedIn</a>
           <a target="_blank" rel="noopener" href="https://github.com/hchinhtrung"
-            class="border px-4 py-1 border-blue-600 rounded-md hover:shadow-lg hover:bg-blue-600 hover:text-white my-1 shadow-md">github</a>
+            class="border px-4 py-1 border-blue-500 rounded-md hover:shadow-lg hover:bg-blue-500 hover:text-white my-1 shadow-md">github</a>
           <a target="_blank" rel="noopener" href="https://www.messenger.com/t/hchinhtrung"
-            class="border px-4 py-1 border-blue-600 rounded-md hover:shadow-lg hover:bg-blue-600 hover:text-white my-1 shadow-md">messenger</a>
+            class="border px-4 py-1 border-blue-500 rounded-md hover:shadow-lg hover:bg-blue-500 hover:text-white my-1 shadow-md">messenger</a>
         </div>
       </div>
     </div>
@@ -280,7 +282,9 @@
 
   <!-- footer -->
   <div class="mt-32 text-sm">
-    <div class="container lg:w-2/3 flex justify-between mx-auto py-2 px-2 border-t-2">
+    <div class="container lg:w-1/3 flex justify-between mx-auto py-2 px-2 border-b-2">
+    </div>
+    <div class="container lg:w-2/3 flex justify-between mx-auto py-2 px-2">
       <span class="mx-auto">
         Copyright hchinhtrung ©2021
       </span>
